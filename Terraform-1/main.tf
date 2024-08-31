@@ -1,4 +1,4 @@
-/*terraform {
+terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -53,4 +53,4 @@ resource "aws_dynamodb_table" "terraform_lock" {
     type = "S"
   }
 }
-*/
+
