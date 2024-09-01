@@ -36,3 +36,8 @@ S3 and DynamoDB Together: By using S3 for centralized state storage and DynamoDB
 7. Configure remote backend with the file **backend.tf**
 8. Run terraform commands: **terraform init**, **terraform plan**, **terraform apply**
 
+**ADDITIONAL CONSIDERATIONS:**
+
+Verify that the IAM role has all required permissions and policies.
+
+
