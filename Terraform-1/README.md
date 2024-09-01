@@ -1,3 +1,5 @@
+## Terraform Project 1
+
 **1. Centralized State Management**
 
 Terraform uses a state file (terraform.tfstate) to keep track of the resources it manages. By default, this state file is stored locally on the machine where Terraform is executed. However, local state storage has several drawbacks, especially when working in team environments or with automated CI/CD pipelines:
