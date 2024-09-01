@@ -1,6 +1,3 @@
-![image](https://github.com/user-attachments/assets/429bf536-0c05-46a7-a5f0-bb74e35f1553)
-
-
 **1. Centralized State Management**
 
 Terraform uses a state file (terraform.tfstate) to keep track of the resources it manages. By default, this state file is stored locally on the machine where Terraform is executed. However, local state storage has several drawbacks, especially when working in team environments or with automated CI/CD pipelines:
@@ -25,4 +22,17 @@ When using Terraform, it is crucial that only one process at a time makes change
 **3. Combining S3 and DynamoDB for Robust State Management**
 
 S3 and DynamoDB Together: By using S3 for centralized state storage and DynamoDB for state locking, you create a robust remote backend for Terraform that supports multiple team members or processes working concurrently. This setup minimizes the risk of conflicts, ensures data integrity, and provides a single source of truth for infrastructure state.
+
+![image](https://github.com/user-attachments/assets/429bf536-0c05-46a7-a5f0-bb74e35f1553)
+
+**USAGE**
+
+1. Properly configure your aws credentials by running **aws configure**.
+2. Verify by running **aws s3 ls**.
+3. Create a directory for terraform project
+4. Create the file **main.tf** for building infrastructure (ex: ec2 instance, s3 bucket, dynamodb table).
+5. Write the files **variables.tf** and **output.tf**
+6. Run terraform commands: **terraform init**, **terraform plan**, **terraform apply**
+7. Configure remote backend with the file **backend.tf**
+8. Run terraform commands: **terraform init**, **terraform plan**, **terraform apply**
 
